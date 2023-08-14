@@ -12,10 +12,10 @@
 
 ##### Stubby зоны
 ###### Stub
-В stub зоне запрещены LSA 4 и 5. При анонсе в stub зону ABR анонсит вместо них себя, как default route
+В stub зоне запрещены LSA 4 и 5. При анонсе в stub зону ABR анонсит вместо них себя, как default route  
 ![Stub Area](../../images/ospf_stub.png)
 ###### Not-So-Stubby (NSSA)
-В отличии от stub зоны разрешен redistribute маршрутов. ABR анонсит default route вместо LSA 4 И 5 опционально(!)
+В отличии от stub зоны разрешен redistribute маршрутов. ABR анонсит default route вместо LSA 4 И 5 опционально(!)  
 ![NSSA Area](../../images/ospf_nssa.png)
 ###### Totally
 Реализуется командой `no-summary` на ABR. ABR начинает LSA 3 также заменять на default route.
