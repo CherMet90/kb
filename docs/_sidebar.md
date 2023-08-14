@@ -9,4 +9,5 @@
     * [Examples](./Networks/BGP/bgp_examples)
     * [Troubleshooting](./Networks/BGP/troubleshooting)
   * OSPF
+    * [LSA and Area types](./Networks/OSPF/LSA_and_areas)
     * [Troubleshooting](./Networks/OSPF/troubleshoot)
