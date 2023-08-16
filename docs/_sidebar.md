@@ -11,3 +11,4 @@
   * OSPF
     * [LSA and Area types](./Networks/OSPF/LSA_and_areas)
     * [Troubleshooting](./Networks/OSPF/troubleshoot)
+  * [IPv6](./Networks/basic)
