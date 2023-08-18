@@ -12,3 +12,4 @@
     * [LSA and Area types](./Networks/OSPF/LSA_and_areas)
     * [Troubleshooting](./Networks/OSPF/troubleshoot)
   * [IPv6](./Networks/IPv6/basic)
+    * [PPPoE Dual-Stack](./Networks/IPv6/pppoe_dual-stack)
