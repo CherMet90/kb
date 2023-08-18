@@ -43,9 +43,13 @@ fe80::a299:9bff:fe18:50d1
 <br>
 
 ##### Зарезервированные префиксы IPv6:
-![Prefix diagram](../../images/04fig06_alt.jpg)
-2000 - 3fff **Global unicast** - аналог публичных адресов  
-fe80 - febf **Link-local** - адреса для коммуникации с локальными устройствами  
+![Prefix diagram](../../images/04fig06_alt.jpg)  
+*2000 - 3fff* **Global unicast** - аналог публичных адресов  
+*fe80 - febf* **Link-local** - адреса для коммуникации с локальными устройствами  
 **Unspecified address** - используется как source, когда адрес еще не назначен  
-fc00 - fdff **Unique local** - аналог приватных адресов  
+*fc00 - fdff* **Unique local** - аналог приватных адресов  
 **IPv4 embedded** - для переноса IPv4 адресов  
+<br>
+
+##### Способы получения IPv6-адреса
+![Ways to get IPv6-address](../../images/ipv6_obtaining.png)  
