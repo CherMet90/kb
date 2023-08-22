@@ -10,6 +10,7 @@ Root-ом выбирается свич с наименьшим bridge priority
 | Designated    | Не-рут порты. Трафик пропускается                                                 |
 | Alternate     | Запасной root-порт. При падении рута, сам становится рутом. Трафик не пропускает  |
 | Blocked       | Запасной designated-порт. Все аналогично alternate-порту                          |
+
 ![Spanning Tree topology](../../images/stp.png)
 <br>
 Порядок выбора root-порта:
