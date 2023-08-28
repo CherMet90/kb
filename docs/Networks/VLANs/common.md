@@ -1,5 +1,6 @@
 *Зачем?*  
 Для сегментирования широковещательного (L2) домена  
+
 *Методы назначения влана:*
   * port-based
   * MAC-based
@@ -7,6 +8,7 @@
   * based on IP subnets (router-on-a-stick)  
 
 *ISL - проприетарный cisco способ тэгирования трафика*  
+
 *Best practice:*  
   * Юзать **voice vlan** для IP-тлф
   * Боремся с **vlan-hopping**:
