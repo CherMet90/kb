@@ -8,6 +8,7 @@
     * [VLANs](./Networks/VLANs/common)
     * [VTP](./Networks/VLANs/vtp)
     * [STP](./Networks/STP/common)
+    * [LACP](./Networks/LACP/config_guide)
   * L3
     * [IPv6](./Networks/IPv6/basic)
       * [PPPoE Dual-Stack](./Networks/IPv6/pppoe_dual-stack)
