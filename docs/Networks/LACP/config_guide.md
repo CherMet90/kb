@@ -4,7 +4,7 @@
 |-----------------------------------|-------------------------------|
 | MTU                               | QoS                           |
 | ACL                               | Committed Access Rate (CAR)   |
-| MAC                               | mpls ip                       |
+| MAC                               |                               |
 | CDP                               |                               |
-| ip verify unicast reverse-path    |                               |
+| ip verify unicast reverse-path    | mpls ip                       |
 | hold queue in                     | hold queue out                |
