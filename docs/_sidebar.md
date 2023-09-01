@@ -12,6 +12,8 @@
     * [LACP](./Networks/LACP/config_guide)
   * L2.5
     * [MPLS](./Networks/MPLS/common)
+      * [L3VPN](./Networks/MPLS/l3vpn)
+        * [Example](./Networks/MPLS/prod_example)
   * L3
     * [NAT](./Networks/NAT/common)
     * [IPv6](./Networks/IPv6/basic)
