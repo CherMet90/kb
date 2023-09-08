@@ -1,4 +1,5 @@
-![GRE-tunnel](../../images/gre.PNG)  
+![GRE-tunnel](../../images/gre.PNG)
+<br>
 Конфигурация:  
 1.  
 ```
