@@ -1,7 +1,7 @@
 Фазы:  
-1. Установление статических hub-spoke тонелей
-2. Использование mGRE для поднятия динамических spoke-spoke тонелей
-3. NHRP (Next Hop Resolution Protocol)
+1. Установление статических *hub-spoke* тунелей
+2. Установление динамических *spoke-to-spoke* тунелей (**mGRE**)
+3. Направление трафика по *spoke-to-spoke* тунелю (**NHRP** (Next Hop Resolution Protocol))
 <br>
 
 ##### Hub configuration
@@ -35,6 +35,12 @@ int tun <номер_тонеля>
 ```
 <br>
 
+##### Spoke Phase 2 configuration
+```
+tun mode gre multi  # используем вместо *tun dest*
+```
+<br>
+
 ##### Phase 3 configuration
 Хаб:  
 ```
@@ -43,6 +49,5 @@ ip nhrp redirect
 Spoke:
 ```
 ip nhrp shortcut
-tun mode gre multi  # используем вместо *tun dest*
 ```
 ![Phase3](../../images/dmvpn_phase3.PNG)
