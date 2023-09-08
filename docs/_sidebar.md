@@ -25,3 +25,5 @@
       * [Path Selection](./Networks/BGP/bgp_path_selection)
       * [Examples](./Networks/BGP/bgp_examples)
       * [Troubleshooting](./Networks/BGP/troubleshooting)
+    * VPN
+      * [GRE](./Networks/VPN/gre)
