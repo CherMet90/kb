@@ -1,3 +1,4 @@
+```
 crypto isakmp policy 10	# настройки фазы 1
  encr aes
  hash sha
@@ -20,3 +21,4 @@ interface Tunnel1
  tunnel destination 10.1.23.3
  tunnel protection ipsec profile IPSECPROFILE
 !
+```
