@@ -16,6 +16,8 @@
         * [Example](./Networks/MPLS/prod_example)
   * L3
     * [NAT](./Networks/NAT/common)
+    * VRRP
+      * [Fortinet](./Networks/VRRP/fortinet_example)
     * [IPv6](./Networks/IPv6/basic)
       * [PPPoE Dual-Stack](./Networks/IPv6/pppoe_dual-stack)
     * OSPF

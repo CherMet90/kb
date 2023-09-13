@@ -6,10 +6,12 @@
 | eBGP      | 20    |
 | OSPF      | 110   |
 | iBGP      | 200   |
+
 <br>
 
 ##### Таблица редистрибьюции протоколов
 ![redistribution table](../images/Route_Redistribution_Seed_Metrics_Chart.jpg)
+<br>
 
 ##### IPv4 подсети
 Here is a table of reserved IPv4 subnets:
