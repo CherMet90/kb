@@ -42,3 +42,35 @@ PubkeyAuthentication yes
 ```
 PasswordAuthentication no
 ```
+<br>
+
+##### Настройка iptables
+1. Добавляем правила:
+```
+sudo iptables -A INPUT -i lo -j ACCEPT
+sudo iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
+sudo iptables -A INPUT -p tcp -m tcp --dport <нестандарный_порт_ssh> -j ACCEPT
+sudo iptables -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p icmp --icmp-type 8 -j ACCEPT
+sudo iptables -P INPUT DROP
+```
+2. Тестируем, устанавливаем `netfilter-persistent`:
+```
+sudo apt update
+sudo apt install iptables-persistent
+sudo netfilter-persistent save
+sudo systemctl enable netfilter-persistent
+sudo systemctl start netfilter-persistent
+```
+3. Меняем порт ssh в `/etc/ssh/sshd_config`
+4. Тестируем ssh-подключение с новым портом
+5. Находим номер и удаляем правило для 22 порта:
+```
+sudo iptables -L --line-numbers
+sudo iptables -D INPUT 5
+```
+6. Тестируем, сохраняем
+```
+sudo netfilter-persistent save
+```
