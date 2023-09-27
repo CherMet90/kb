@@ -1,7 +1,7 @@
 ##### sudo WinSCP 
 1. В файле `/etc/sudoers` разрешаем пользователю запуск sftp с рут-правами без запроса пароля:
 ```
-chermet ALL=NOPASSWD: /usr/lib/openssh/sftp-server
+<username> ALL=NOPASSWD: /usr/lib/openssh/sftp-server
 ```
 2. Добавляем параметры запуска для соединения в самой программе WinSCP:
 ```
