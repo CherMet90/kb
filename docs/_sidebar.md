@@ -36,6 +36,9 @@
   * L4
     * [TCP](./Networks/L4/tcp)
 * [Linux](./Linux/begin)
+* Coding
+  * Python
+    * [Добавление окружения](./Coding/Python/create_environment)
 * Vendors
   * [Cisco](./Networks/Vendors/cisco)
   * [pfSense](./Networks/Vendors/pfSense)
