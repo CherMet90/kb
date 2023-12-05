@@ -39,6 +39,7 @@
   * [Cisco](./Networks/Vendors/cisco)
   * [pfSense](./Networks/Vendors/pfSense)
 * [Linux](./Linux/begin)
+  * [How to](./Linux/how_to_unzip.md)
 * Coding
   * Python
     * [Добавление окружения](./Coding/Python/create_environment)
