@@ -15,6 +15,7 @@
       * [L3VPN](./Networks/MPLS/l3vpn)
         * [Example](./Networks/MPLS/prod_example)
   * L3
+    * [Subnetting](./Networks/subneting)
     * [NAT](./Networks/NAT/common)
     * VRRP
       * [Fortinet](./Networks/VRRP/fortinet_example)
