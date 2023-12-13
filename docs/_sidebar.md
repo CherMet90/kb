@@ -39,6 +39,7 @@
 * Vendors
   * [Cisco](./Networks/Vendors/cisco)
   * [pfSense](./Networks/Vendors/pfSense)
+  * [vCenter](./vCenter.md)
 * [Linux](./Linux/begin)
   * [How to](./Linux/how_to_unzip.md)
 * Coding
