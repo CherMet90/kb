@@ -38,9 +38,16 @@ net.isr.maxthreads: -1
 net.isr.dispatch: deferred
 ```
 Есть режим `hybrid` по документации должен начинать раскидывать поток по ядрам только если основное ядро потока занято *(не проверено)*  
+###### Применение параметров при загрузке pf
+Добавляем в файл `/boot/loader.conf` строки:  
+```
+net.isr.bindthreads="1"
+net.isr.maxthreads="-1"
+net.isr.dispatch="hybrid"
+```
 <br>
 
-Посмотреть **arp-таблицу**:  
+##### Посмотреть **arp-таблицу**:  
 ```
 arp -a | grep <MAC address>
 arp -a | grep <hostname>
