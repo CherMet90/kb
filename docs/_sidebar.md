@@ -39,9 +39,10 @@
 * Vendors
   * [Cisco](./Networks/Vendors/cisco)
   * [pfSense](./Networks/Vendors/pfSense)
-  * [vCenter](./vCenter.md)
+  * [vCenter](./vCenter)
 * [Linux](./Linux/begin)
-  * [How to](./Linux/how_to_unzip.md)
+  * [How to](./Linux/how_to_unzip)
+  * [Strongswan](./Linux/strongswan)
 * Coding
   * Python
     * [Добавление окружения](./Coding/Python/create_environment)
