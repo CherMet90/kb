@@ -25,6 +25,7 @@ conn cisco-to-ubuntu
     auto=start
 ```
 Если не указывать `leftsubnet` и `rightsubnet`, то сервер поднимет тунель, но принимать или отправлять трафик в него не будет  
+
 3. `/etc/ipsec.secrets`:  
 ```
 <локальный_внешний_ip> <удаленный_внешний_ip> : PSK "p@ssw0rd"
