@@ -36,3 +36,7 @@ interface Tunnel2
  tunnel protection ipsec profile VTI
 !
 ```
+<br>
+
+Чтобы в логах было локальное время:  
+`service timestamps log datetime localtime show-timezone`
