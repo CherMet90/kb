@@ -1,18 +1,15 @@
 ##### SSH Script
-1. Закидываем файл скрипта по пути `/usr/prtg/scripts`
+1. Закидываем файл скрипта по пути `/var/prtg/scripts`
 2. Пример скрипта для мониторинга процесса во FreeBSD:  
 ```
 #!/bin/sh
-
 # Проверяем, был ли передан аргумент с именем процесса
 if [ $# -eq 0 ]; then
   echo "0:0:Bad argument"
   exit 1
 fi
-
 process_name=$1
 status=$( /bin/pgrep "$process_name" )
-
 # Проверяем, есть ли такой процесс
 if [ -n "$status" ]; then
   # Процесс существует
@@ -23,7 +20,7 @@ else
 fi
 ```
 В общем случае скрипт может принимать аргумент и должен выводить значение в формате `returncode:value:message`  
-![returncode_values](../../docs/images/returncode_values.PNG)
+![returncode_values](../../images/returncode_values.PNG)
 3. Необходимо предусмотреть пользователя, под которым будет заходить PRTG. У пользователя должны быть права на доступ по SSH и права на исполнение файлов (скрипта)
 4.1 Получаем список оболочек в системе:  
 `cat /etc/shells`
