@@ -46,3 +46,5 @@
 * Coding
   * Python
     * [Добавление окружения](./Coding/Python/create_environment)
+* Мониторинг
+  * [PRTG](./Мониторинг/prtg.md)
