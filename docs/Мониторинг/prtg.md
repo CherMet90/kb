@@ -20,7 +20,7 @@ else
 fi
 ```
 В общем случае скрипт может принимать аргумент и должен выводить значение в формате `returncode:value:message`  
-![returncode_values](../../images/returncode_values.PNG)
+![returncode_values](../images/returncode_values.PNG)
 3. Необходимо предусмотреть пользователя, под которым будет заходить PRTG. У пользователя должны быть права на доступ по SSH и права на исполнение файлов (скрипта)
 4.1 Получаем список оболочек в системе:  
 `cat /etc/shells`
