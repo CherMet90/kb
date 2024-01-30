@@ -40,6 +40,17 @@ interface Tunnel2
 
 Чтобы в логах было локальное время:  
 `service timestamps log datetime localtime show-timezone`
+<br>
 
 Мониторинг утилизации ресурсов (CPU, память и т.д.):  
 `sh processes`
+<br>
+
+Настройка зеркалирования:
+```
+configure terminal
+monitor session 1 source interface <source port>
+monitor session 1 destination interface <destination port>
+end
+```
+<br>
