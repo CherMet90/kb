@@ -8,7 +8,7 @@ sudo apt install strongswan
 ```
 config setup
     charondebug="ike 2, knl 2, cfg 2, net 2, esp 2, dmn 2,  mgr 2"
-
+    
 conn %default
     keyexchange=ikev1
     authby=secret
@@ -16,7 +16,7 @@ conn %default
     esp=aes128-sha256-modp2048
     dpdaction=clear
     keyingtries=%forever
-
+    
 conn cisco-to-ubuntu
     left=%defaultroute
     leftid=<локальный_внешний_ip>
@@ -46,12 +46,12 @@ sudo systemctl enable strongswan
 ```
 config setup
     charondebug="ike 2, knl 2, cfg 2, net 2, esp 2, dmn 2,  mgr 2"
-
+    
 conn %default
     keyexchange=ikev2
     authby=secret
     keyingtries=%forever
-
+    
 conn example
     keyexchange=ikev2
     ike=aes256gcm16-prfsha256-modp2048,aes256-sha256-modp2048,aes128-sha256-modp2048!
@@ -82,7 +82,7 @@ net.ipv4.ip_forward=1
 4. `/etc/ipsec.d/vti0.sh`:  
 ```
 #!/bin/bash
-
+    
 # Variables
 VTI_INTERFACE="vti0"
 LOCAL_IP="<LOCAL_PUBLIC_IP>"
@@ -91,13 +91,13 @@ VTI_LOCAL_ADDR="172.31.30.1/30"
 VTI_KEY=42
 # Define your networks here. Example: "192.168.100.0/24 10.10.10.0/24"
 ROUTE_NETS=("192.168.100.0/24" "10.10.10.0/24")
-
+    
 function route_exists {
     # Check if the route already exists in the routing table
     # $1 - network
     ip route show $1 dev $VTI_INTERFACE > /dev/null 2>&1
 }
-
+    
 case "$PLUTO_VERB" in
     up-client)
         # Set up VTI interface
@@ -105,7 +105,7 @@ case "$PLUTO_VERB" in
         ip link set $VTI_INTERFACE up
         ip addr add $VTI_LOCAL_ADDR dev $VTI_INTERFACE
         sysctl -w net.ipv4.conf.$VTI_INTERFACE.disable_policy=1
-
+        
         # Add routes for each network in the list
         for NET in "${ROUTE_NETS[@]}"; do
             ip route add $NET dev $VTI_INTERFACE
@@ -118,7 +118,7 @@ case "$PLUTO_VERB" in
                 ip route del $NET dev $VTI_INTERFACE
             fi
         done
-
+        
         # Tear down VTI interface
         ip tunnel del $VTI_INTERFACE
         ;;
