@@ -65,7 +65,7 @@ conn example
     rightsubnet=0.0.0.0/0
     auto=start
     mark=42
-    dpdaction=clear
+    dpdaction=restart
     dpddelay=10s
     dpdtimeout=50s
     ikelifetime=24h
@@ -103,6 +103,7 @@ case "$PLUTO_VERB" in
         # Set up VTI interface
         ip tunnel add $VTI_INTERFACE local $LOCAL_IP remote $REMOTE_IP mode vti key $VTI_KEY
         ip link set $VTI_INTERFACE up
+        ip link set dev $VTI_INTERFACE mtu 1400
         ip addr add $VTI_LOCAL_ADDR dev $VTI_INTERFACE
         sysctl -w net.ipv4.conf.$VTI_INTERFACE.disable_policy=1
         
@@ -131,4 +132,16 @@ sysctl -p
 ipsec restart
 ipsec status
 systemctl enable strongswan
+iptables -t nat -A POSTROUTING -o <интерфейс_в_интернет> -j MASQUERADE
+iptables -t mangle -A POSTROUTING -o vti0 -p tcp -m tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1230
+```
+Последовательность если вдруг скрипт не рабоатет:  
+```
+ip tunnel add vti0 local <LOCAL_PUBLIC_IP> remote <REMOTE_PUBLIC_IP> mode vti key 42
+ip link set vti0 up
+ip addr add 172.31.30.1/30 dev vti0
+ip route add 10.0.0.0/8 dev vti0
+ip route add 192.168.0.0/16 dev vti0
+ipsec restart
+ping -c 3 172.31.30.2
 ```
