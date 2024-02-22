@@ -133,6 +133,7 @@ ipsec restart
 ipsec status
 systemctl enable strongswan
 iptables -t nat -A POSTROUTING -o <интерфейс_в_интернет> -j MASQUERADE
+iptables -t mangle -A FORWARD -i vti0 -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
 iptables -t mangle -A POSTROUTING -o vti0 -p tcp -m tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu
 ```
 Последовательность если вдруг скрипт не рабоатет:  
