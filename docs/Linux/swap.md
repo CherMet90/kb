@@ -14,3 +14,8 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 swapon --show
 ```
+4. Сделать его persistant:
+```
+sudo nano /etc/fstab
+/swapfile none swap sw 0 0
+```
