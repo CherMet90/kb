@@ -44,6 +44,7 @@
   * [How to](./Linux/how_to_unzip)
   * [Strongswan](./Linux/strongswan)
   * [Nmap](./Linux/nmap)
+  * [Swap](./Linux/swap)
 * Coding
   * Python
     * [Добавление окружения](./Coding/Python/create_environment)
