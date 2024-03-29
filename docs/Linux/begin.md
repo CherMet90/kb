@@ -64,7 +64,7 @@ sudo systemctl enable netfilter-persistent
 sudo systemctl start netfilter-persistent
 ```
 3. Меняем порт ssh в `/etc/ssh/sshd_config`
-4. Тестируем ssh-подключение с новым портом
+4. `systemctl restart ssh.d` Тестируем ssh-подключение с новым портом
 5. Находим номер и удаляем правило для 22 порта:
 ```
 sudo iptables -L --line-numbers
