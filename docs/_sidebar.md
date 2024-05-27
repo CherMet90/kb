@@ -41,7 +41,7 @@
   * [pfSense](./Networks/Vendors/pfSense)
   * [vCenter](./vCenter)
 * [Linux](./Linux/begin)
-  * [How to](./Linux/how_to_unzip)
+  * [How to](./Linux/how_to)
   * [Strongswan](./Linux/strongswan)
   * [Nmap](./Linux/nmap)
   * [Swap](./Linux/swap)
@@ -50,4 +50,4 @@
     * [Добавление окружения](./Coding/Python/create_environment)
 * Мониторинг
   * [PRTG](./Мониторинг/prtg.md)
-  * [DOcker](./Мониторинг/Создание%20TLS%20сертификатов%20для%20подключения%20к%20Docker.md)
+  * [Docker](./Мониторинг/Создание%20TLS%20сертификатов%20для%20подключения%20к%20Docker.md)
