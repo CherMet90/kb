@@ -45,10 +45,12 @@
   * [Strongswan](./Linux/strongswan)
   * [Nmap](./Linux/nmap)
   * [Swap](./Linux/swap)
-  * [DOcker](./Linux/docker.md)
+  * [Docker](./Linux/docker.md)
 * Coding
   * Python
     * [Добавление окружения](./Coding/Python/create_environment)
+  * Git
+    * [Repo migration](./Coding/Git/migration)
 * Мониторинг
   * [PRTG](./Мониторинг/prtg.md)
   * [Docker](./Мониторинг/Создание%20TLS%20сертификатов%20для%20подключения%20к%20Docker.md)
