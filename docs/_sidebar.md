@@ -40,6 +40,7 @@
   * [Cisco](./Networks/Vendors/cisco)
   * [pfSense](./Networks/Vendors/pfSense)
   * [vCenter](./vCenter)
+  * [Fortinet](./Networks/Vendors/fortigate.md)
 * [Linux](./Linux/begin)
   * [How to](./Linux/how_to)
   * [Strongswan](./Linux/strongswan)
