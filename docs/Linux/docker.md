@@ -51,3 +51,19 @@ docker run --rm --entrypoint sh -v "/docker/data/haproxy/":/dest haproxy -c 'cp 
 *Что происходит:*  
 Запускается контейнер на основе указанного образа. Локальная папка `/docker/data/haproxy/` монтируется в созданный контейнер. Выполняется произвольная команда, в нашем случае `cp /usr/local/etc/haproxy/haproxy.cfg /dest`, контейнер останавливается и удаляется. В результате `/usr/local/etc/haproxy/haproxy.cfg` из контейнера будет скопирован в локальную папку `/docker/data/haproxy/`
 
+
+##### Настройка подсети в docker compose
+```
+services:
+  <service_name>:
+    networks:
+      - <network_name>
+
+networks:
+  <network_name>:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.0.0/24
+          gateway: 172.18.0.1
+```
