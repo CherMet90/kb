@@ -12,7 +12,6 @@ ssh-keygen -p -f rundeck -m pem
 ```
 # Если требуется глобально разрешить rsa
 PubkeyAcceptedAlgorithms +ssh-rsa
-
 # Либо разрешить ssh-rsa для определенных адресов/подсетей
 Match Address 172.18.0.0/24,192.168.1.100
     PubkeyAcceptedAlgorithms +ssh-rsa
