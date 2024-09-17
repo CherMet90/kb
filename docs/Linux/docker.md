@@ -30,11 +30,9 @@ docker stop $(docker ps -q) && docker rm $(docker ps -a -q) && docker system pru
 
 
 ##### Как скопировать файл из запущенного КОНТЕЙНЕРА в локальную фс
-
 ```
 docker cp <container_id>:<абсолютный_путь_до_файла_в_контейнере> <путь_КУДА_СОХРАНИТЬ_в_локальной_фс>
 ```
-
 *Пример:*
 ```
 docker cp 2d22e790546b:/home/rundeck/server/config/log4j2.properties ./log4j.properties
