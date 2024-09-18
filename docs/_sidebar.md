@@ -44,6 +44,7 @@
 * [Linux](./Linux/begin)
   * [How to](./Linux/how_to)
   * [SSH](./Linux/ssh.md)
+  * [fail2ban](./Linux/fail2ban)
   * [Strongswan](./Linux/strongswan)
   * [Nmap](./Linux/nmap)
   * [Swap](./Linux/swap)
