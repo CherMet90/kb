@@ -10,3 +10,16 @@ config system fortiguard
     set auto-firmware-upgrade disable   # не разрешает запрашивать обновление со стороны самого устройства
 end
 ```  
+<br>
+
+##### Сохранение вручную  
+###### Включить режим  
+```
+config system global
+set cfg-save manual
+end
+```  
+###### Команда сохранения  
+```
+exec cfg save
+```
