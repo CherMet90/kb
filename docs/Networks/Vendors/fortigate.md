@@ -23,3 +23,17 @@ end
 ```
 exec cfg save
 ```
+
+##### Управление таймаутом сессий
+```
+config system session-ttl
+    set default 3600    # глобальное значение
+    config port         # port-specific настройки
+        edit 7700       # id елемента (не обязан быть равен порту)
+            set protocol 6          # протокол, TCP=6, обязательный параметр
+            set timeout 9000        # значение таймаута
+            set start-port 7700     # задаем порты, на которые распространяется настройка
+            set end-port 7700
+        next
+    end
+```
