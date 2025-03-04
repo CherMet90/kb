@@ -41,6 +41,8 @@
   * [pfSense](./Networks/Vendors/pfSense)
   * [vCenter](./vCenter)
   * [Fortinet](./Networks/Vendors/fortigate.md)
+* Windows
+  * [File Server](./Windows/file_server.md)
 * [Linux](./Linux/begin)
   * [How to](./Linux/how_to)
   * [SSH](./Linux/ssh.md)

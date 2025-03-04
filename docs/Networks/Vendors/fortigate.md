@@ -40,7 +40,7 @@ config system session-ttl
 
 
 ##### RADIUS-авторизация
-Предполагается, что сам radius-сервер уже добавлен
+Предполагается, что сам radius-сервер уже добавлен  
 Создаем admin-профиль:  
 ```
     edit "radius_user_access"
