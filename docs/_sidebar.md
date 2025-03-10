@@ -43,6 +43,7 @@
   * [Fortinet](./Networks/Vendors/fortigate.md)
 * Windows
   * [File Server](./Windows/file_server.md)
+  * [RDP](./Windows/rdp.md)
 * [Linux](./Linux/begin)
   * [How to](./Linux/how_to)
   * [SSH](./Linux/ssh.md)
