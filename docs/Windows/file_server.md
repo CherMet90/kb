@@ -39,7 +39,7 @@
 ```
 vssadmin add shadowstorage /for=C: /on=D: /maxsize=200MB    # создаём хранилище теневых копий
 vssadmin list shadowstorage         # смотрим список созданных хранилищ
-vssadmin create shadows /for=C:     # создаём теневую копию раздела
+vssadmin create shadow /for=C:     # создаём теневую копию раздела
 vssadmin list shadows               # список существующих теневых копий
 
 # Менеджмент команды
