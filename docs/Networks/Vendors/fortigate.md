@@ -116,3 +116,10 @@ config system session-ttl
         set vdom-override disable
     next
 ```
+<br>
+
+##### Захват трафика CLI
+```
+# diagnose sniffer packet <interface> '<filter>'
+diagnose sniffer packet any 'host 192.168.71.6'
+```
