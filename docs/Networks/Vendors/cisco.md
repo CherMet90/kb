@@ -1,4 +1,4 @@
-Конфигурация *telnet* без использования *aaa new-model* (логина):  
+###### Конфигурация *telnet* без использования *aaa new-model* (логина):  
 ```
 !
 line vty 0 4
@@ -9,7 +9,7 @@ line vty 0 4
 ```
 <br>
 
-Конфигурация `ipsec`:  
+###### Конфигурация `ipsec`:  
 ```
 !
 crypto isakmp policy 1
@@ -38,15 +38,15 @@ interface Tunnel2
 ```
 <br>
 
-Чтобы в логах было локальное время:  
+###### Чтобы в логах было локальное время:  
 `service timestamps log datetime localtime show-timezone`
 <br>
 
-Мониторинг утилизации ресурсов (CPU, память и т.д.):  
+###### Мониторинг утилизации ресурсов (CPU, память и т.д.):  
 `sh processes`
 <br>
 
-Настройка зеркалирования:
+###### Настройка зеркалирования:
 ```
 configure terminal
 monitor session 1 source interface <source port>
@@ -54,3 +54,8 @@ monitor session 1 destination interface <destination port>
 end
 ```
 <br>
+
+##### ASA
+Есть **Group Policy**, а есть **Connection Profile**
+* **Connection Profile** определяет способ и требования для аутентификации: 2FA или креды, наличие сертов на устройстве
+* Разрешения (dns-сервера, ACL, split-tunnel и т.п.), которые действуют уже после успешного подключения определяются настройками **Group Policy**
