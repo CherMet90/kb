@@ -123,3 +123,13 @@ config system session-ttl
 # diagnose sniffer packet <interface> '<filter>'
 diagnose sniffer packet any 'host 192.168.71.6'
 ```
+<br>
+
+
+##### Отключение приветственного окна
+```
+config system global
+    set gui-auto-upgrade-setup-warning disable
+    set gui-forticare-registration-setup-warning disable
+end
+```
