@@ -57,7 +57,10 @@
   * Python
     * [Добавление окружения](./Coding/Python/create_environment)
   * Git
-    * [Repo migration](./Coding/Git/migration)
+    * [Миграция между удалёнными репозиториями](./Coding/Git/migration.md)
+    * [Управление удалёнными репозиториями](./Coding/Git/remotes.md)
+    * [Настройка авторов и учётных данных](./Coding/Git/credentials.md)
+    * [Переписывание авторства в истории](./Coding/Git/rewrite-author.md)
 * Мониторинг
   * [PRTG](./Мониторинг/prtg.md)
   * [Docker](./Мониторинг/Создание%20TLS%20сертификатов%20для%20подключения%20к%20Docker.md)
