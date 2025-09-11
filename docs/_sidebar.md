@@ -63,6 +63,8 @@
     * [Настройка авторов и учётных данных](./Coding/Git/credentials.md)
     * [Переписывание авторства в истории](./Coding/Git/rewrite-author.md)
     * [Переключаемся на ветку](./Coding/Git/branch-switching.md)
+  * Ansible
+    * [From Zero to Hero](./Coding/Ansible/from_zero_to_hero.md)
 * Мониторинг
   * [PRTG](./Мониторинг/prtg.md)
   * [Docker](./Мониторинг/Создание%20TLS%20сертификатов%20для%20подключения%20к%20Docker.md)
