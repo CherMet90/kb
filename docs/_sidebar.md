@@ -41,7 +41,10 @@
   * [pfSense](./Networks/Vendors/pfSense)
   * [vCenter](./vCenter)
   * [Fortinet](./Networks/Vendors/fortigate.md)
-  * [Huawei](./Networks/Vendors/huawei.md)
+  * Huawei
+    * [Firmware](./Networks/Vendors/huawei/firmware.md)
+    * [RADIUS](./Networks/Vendors/huawei/radius.md)
+    * [SNMP](./Networks/Vendors/huawei/snmp.md)
 * Windows
   * [File Server](./Windows/file_server.md)
   * [RDP](./Windows/rdp.md)
