@@ -49,6 +49,7 @@
   * [File Server](./Windows/file_server.md)
   * [RDP](./Windows/rdp.md)
   * [Network settings](./Windows/tcp_settings.md)
+  * [Drivers](./Windows/drivers.md)
 * [Linux](./Linux/begin)
   * [How to](./Linux/how_to)
   * [SSH](./Linux/ssh.md)
