@@ -50,6 +50,7 @@
   * [RDP](./Windows/rdp.md)
   * [Network settings](./Windows/tcp_settings.md)
   * [Drivers](./Windows/drivers.md)
+  * [Hyper-V](./Windows/hyper-v.md)
 * [Linux](./Linux/begin)
   * [How to](./Linux/how_to)
   * [SSH](./Linux/ssh.md)
