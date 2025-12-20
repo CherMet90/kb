@@ -40,6 +40,8 @@
   * [Cisco](./Networks/Vendors/cisco)
     * NX-OS
       * [Multicast](./Networks/Vendors/cisco/NX-OS/multicast.md)
+    * IOS XE
+      * [Netflow](./Networks/Vendors/cisco/IOS-XE/netflow.md)
   * [pfSense](./Networks/Vendors/pfSense)
   * [vCenter](./vCenter)
   * [Fortinet](./Networks/Vendors/fortigate.md)
@@ -75,3 +77,4 @@
 * Мониторинг
   * [PRTG](./Мониторинг/prtg.md)
   * [Docker](./Мониторинг/Создание%20TLS%20сертификатов%20для%20подключения%20к%20Docker.md)
+  * [Netflow](./Мониторинг/netflow.md)
