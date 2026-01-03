@@ -53,3 +53,40 @@ Add an entry to ensure the new disk mounts at startup:
      ```sudo ln -s /mnt/newdisk/.vscode-server /home/username/.vscode-server```
 4. Ensure the link works and the `.vscode-server` directory is accessible:  
    ```ls -l /home/username/.vscode-server```
+
+##### Настройка автоматических security updates (Ubuntu)
+- устанавливаем пакет
+     ```
+     sudo apt-get install unattended-upgrades
+     ```
+- включаем автообновления 
+     ```
+     sudo dpkg-reconfigure --priority=low unattended-upgrades
+     ```
+- в настройках `/etc/apt/apt.conf.d/50unattended-upgrades` в `Unattended-Upgrade::Allowed-Origins` настраиваем каналы, которые хотим автоматически обновлять, например комментим `"${distro_id}:${distro_codename}";`, чтобы избежать автоматического обновления всех пакетов, оставляем - `-security` канал
+- проверяем настройки периодичности обновлений в `/etc/apt/apt.conf.d/20auto-upgrades`:
+     ```
+     APT::Periodic::Update-Package-Lists "1";
+     APT::Periodic::Unattended-Upgrade "1";
+     ```
+- можем настроить временной период для обновлений:
+     ```
+     # Проверяем часовой пояс системного времени
+     timedatectl
+     # Открываем редактор настроек
+     sudo systemctl edit apt-daily-upgrade.timer
+     # Не расскоментируем существующие примеры, а вставляем блок выше (в файле есть комментарий, который гласит, что ниже него по файлу настройки игнорируются)
+     [Timer]
+     OnCalendar=*-*-* 17:00:00     # Начало периода обновлений по системному времени
+     RandomizedDelaySec=40m        # Длительность промежутка, в течении которого обновление может быть запущено (конкретное время будет рандомизировано при каждом запуске)
+     ```
+- сохраняем, закрываем (`Ctrl+O → Enter → Ctrl+X`)
+- применяем настройки
+     ```
+     sudo systemctl daemon-reload
+     sudo systemctl restart apt-daily-upgrade.timer
+     ```
+- проверяем, что они применились - наша секция должна появится в конце вывода
+     ```
+     systemctl cat apt-daily-upgrade.timer
+     ```
