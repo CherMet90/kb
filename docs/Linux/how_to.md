@@ -63,7 +63,7 @@ Add an entry to ensure the new disk mounts at startup:
      ```
      sudo dpkg-reconfigure --priority=low unattended-upgrades
      ```
-- в настройках `/etc/apt/apt.conf.d/50unattended-upgrades` в `Unattended-Upgrade::Allowed-Origins` настраиваем каналы, которые хотим автоматически обновлять, например комментим `"${distro_id}:${distro_codename}";`, чтобы избежать автоматического обновления всех пакетов, оставляем - `-security` канал
+- в настройках `/etc/apt/apt.conf.d/50unattended-upgrades` в `Unattended-Upgrade::Allowed-Origins {}` настраиваем каналы, которые хотим автоматически обновлять, например комментим `"${distro_id}:${distro_codename}";`, чтобы избежать автоматического обновления всех пакетов, оставляем - `-security` канал
 - проверяем настройки периодичности обновлений в `/etc/apt/apt.conf.d/20auto-upgrades`:
      ```
      APT::Periodic::Update-Package-Lists "1";
@@ -73,9 +73,11 @@ Add an entry to ensure the new disk mounts at startup:
      ```
      # Проверяем часовой пояс системного времени
      timedatectl
+
      # Открываем редактор настроек
      sudo systemctl edit apt-daily-upgrade.timer
-     # Не расскоментируем существующие примеры, а вставляем блок выше (в файле есть комментарий, который гласит, что ниже него по файлу настройки игнорируются)
+     
+     # Не расскоментируем существующие примеры, а вставляем блок выше секции с примерами (в файле есть комментарий, который гласит, что ниже него по файлу настройки игнорируются)
      [Timer]
      OnCalendar=*-*-* 17:00:00     # Начало периода обновлений по системному времени
      RandomizedDelaySec=40m        # Длительность промежутка, в течении которого обновление может быть запущено (конкретное время будет рандомизировано при каждом запуске)
